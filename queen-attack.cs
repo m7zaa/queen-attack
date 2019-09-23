@@ -30,7 +30,6 @@ class QueenAttack
         }
      }
      Console.WriteLine("Queen's column: " + queenColInt + " Pawn's column: " + pawnColInt);
-     
      bool queenColValid = false;
      bool queenRowValid = false;
      bool pawnColValid = false;
@@ -55,8 +54,6 @@ class QueenAttack
         }
      }
 
-
-
      if (queenColInt == pawnColInt && queenRow == pawnRow) 
      {
          Console.WriteLine("The Queen and Pawn must be in different places. Please try again.");
@@ -67,5 +64,13 @@ class QueenAttack
          Console.WriteLine("Invalid coordinates. Please try again.");
          Main();
      }
+     else if (queenColInt == pawnColInt || queenRow == pawnRow)
+     {
+         Console.WriteLine("Your pawn is in danger of capture by side/front/back attack!!!");
+     }
+     else if (Math.Abs((queenColInt-pawnColInt)/(queenRow-pawnRow)) == 1)
+     {
+        Console.WriteLine("Your pawn is in danger of capture by diaginal attack!!!");
+        }
     }  
 }
