@@ -15,6 +15,7 @@ class QueenAttack
      int pawnRow = int.Parse(Console.ReadLine());
 
      string[] columns = { "A", "B", "C", "D", "E", "F", "G", "H"};
+     int[] rows = {1, 2, 3, 4, 5, 6, 7, 8};
      int queenColInt = 0;
      int pawnColInt = 0;
      for (int i = 0; i < columns.Length; i++)
@@ -29,5 +30,42 @@ class QueenAttack
         }
      }
      Console.WriteLine("Queen's column: " + queenColInt + " Pawn's column: " + pawnColInt);
-    }
+     
+     bool queenColValid = false;
+     bool queenRowValid = false;
+     bool pawnColValid = false;
+     bool pawnRowValid = false;
+     foreach (int x in rows)
+     {
+        if (x == queenColInt)
+        {
+            queenColValid = true;
+        }
+        if (x == queenRow)
+        {
+            queenRowValid = true;
+        }
+        if (x == pawnColInt)
+        {
+            pawnColValid = true;
+        }
+        if (x == pawnRow)
+        {
+            pawnRowValid = true;
+        }
+     }
+
+
+
+     if (queenColInt == pawnColInt && queenRow == pawnRow) 
+     {
+         Console.WriteLine("The Queen and Pawn must be in different places. Please try again.");
+         Main();
+     }
+     else if (!queenColValid || !queenRowValid || !pawnColValid || !pawnRowValid)
+     {
+         Console.WriteLine("Invalid coordinates. Please try again.");
+         Main();
+     }
+    }  
 }
