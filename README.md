@@ -1,12 +1,12 @@
 # _Queen Attack_
 
-#### _Restaurant Finder, 2019_
+#### _Queen Attack, 2019_
 
 #### By _**Micah Zaayer**_
 
 ## Description
 
-_Database with many-to-many relationships allows users to register and CRUD cuisines/restaurants to the database._
+_Determines whether your queen is in danger._
 
 
 ## Known Bugs
@@ -19,7 +19,7 @@ _Micah Zaayer @ zaayer@protonmail.com_
 
 ## Technologies Used
 
-_C#, .Net Core MVC, Identity_
+_C#_
 
 ### License
 
